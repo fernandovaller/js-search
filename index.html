@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Search</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="">JS Search</h1>
+			<p>Exemplo simples de pesquisa com JS em tabelas, div, li, etc</p>
+			<hr>
+
+			<div class="form-group">
+				<label for="">Pesquisa</label>			
+				<div class="input-group">
+					<input type="text" class="form-control" id="find" data-target="#tbusers tr" placeholder="Search">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="button" id="find-btn">Go!</button>
+					</span>
+				</div>
+			</div>
+
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>NAME</th>
+						<th>EMAIL</th>
+						<th>FONE</th>
+						<th>ENDEREÇO</th>
+						<th>CIDADE</th>
+						<th>ESTADO</th>
+					</tr>
+				</thead>
+
+				<tbody id="tbusers"><tr><td>8324</td><td>Addie Shields</td><td>sherman55@example.org</td><td>1-844-727-8606</td><td>228 Paris Fork Apt. 162 Boganberg, UT 46184</td><td>Laneychester</td><td>Arizona</td></tr><tr><td>5188</td><td>Brent Bogisich IV</td><td>treutel.gabrielle@example.org</td><td>855-498-9536</td><td>2963 Alan Groves South Vivienneburgh, SD 37599</td><td>Stehrfort</td><td>North Dakota</td></tr><tr><td>1142</td><td>Jalen Dietrich</td><td>schumm.bobbie@example.com</td><td>(844) 945-6010</td><td>2830 Runolfsson Mission Apt. 771 Marcburgh, NJ 94172-7344</td><td>South Hester</td><td>North Carolina</td></tr><tr><td>5429</td><td>Imani Hodkiewicz</td><td>lauren.breitenberg@example.org</td><td>844.966.7218</td><td>771 Estelle Lake Suite 816 East Richardview, CA 33361</td><td>New Lazarostad</td><td>Alaska</td></tr><tr><td>6956</td><td>Richmond Gulgowski</td><td>vheidenreich@example.net</td><td>844.398.8418</td><td>890 Drake Villages Apt. 473 Caesarland, NV 36431</td><td>Port Carlo</td><td>Nebraska</td></tr><tr><td>4267</td><td>Odie Wehner</td><td>tsteuber@example.net</td><td>877-502-9803</td><td>591 Larson Dam Suite 345 Millerside, ME 27585</td><td>Jayceburgh</td><td>Oklahoma</td></tr><tr><td>3377</td><td>Bethany Koepp</td><td>daphney43@example.org</td><td>877.592.2148</td><td>88708 Warren Meadows Suite 460 New Traceyhaven, PA 88193-1996</td><td>Weissnatburgh</td><td>Alaska</td></tr><tr><td>1242</td><td>Amely Rowe</td><td>myra.koch@example.org</td><td>844.799.7804</td><td>35478 Muriel Glens Apt. 757 Andreside, SD 84626</td><td>Metzberg</td><td>California</td></tr><tr><td>1097</td><td>Clemmie Ziemann I</td><td>jamar.dibbert@example.net</td><td>1-800-563-6797</td><td>280 Lindgren Light Apt. 648 Port Aprilberg, CA 21292</td><td>Pascaleshire</td><td>Nebraska</td></tr><tr><td>2804</td><td>Garret Baumbach</td><td>bechtelar.vicenta@example.com</td><td>(800) 960-4075</td><td>4650 Ferry Parks Apt. 294 Schneidershire, OH 63300</td><td>Port Iva</td><td>Missouri</td></tr><tr><td>2556</td><td>Prof. Barton Glover DVM</td><td>cydney21@example.com</td><td>(855) 837-9988</td><td>865 Willard Mills Haneburgh, AL 82168</td><td>West Benton</td><td>Tennessee</td></tr><tr><td>6438</td><td>Gerry Kub</td><td>jermain35@example.com</td><td>1-866-509-1700</td><td>42588 Towne Wall Suite 185 Schneiderport, NH 12661</td><td>Port Olaville</td><td>Tennessee</td></tr><tr><td>5372</td><td>Aurore Grant</td><td>hrau@example.net</td><td>877-557-0035</td><td>702 Darwin Curve Apt. 853 Schultzmouth, TN 71636-0973</td><td>West Demarco</td><td>West Virginia</td></tr><tr><td>8110</td><td>Allene Schmeler IV</td><td>bashirian.moises@example.org</td><td>1-888-421-0149</td><td>3473 Mariana Row Brooklynchester, AL 80740-4733</td><td>Crookstown</td><td>Pennsylvania</td></tr><tr><td>1614</td><td>Alvis Borer</td><td>kroob@example.net</td><td>844.284.6033</td><td>335 Ankunding Prairie Rosendomouth, NJ 81938-1569</td><td>West Danyka</td><td>Kansas</td></tr><tr><td>2406</td><td>Lew Aufderhar DDS</td><td>zbernhard@example.com</td><td>888-513-0986</td><td>714 Petra Mews Suite 584 Batzside, IA 58659</td><td>New Lionel</td><td>Maine</td></tr></tbody></table>
+		</div>
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="app.js"></script>
+	</body>
+	</html>
